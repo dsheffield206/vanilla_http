@@ -3,7 +3,7 @@
 var http = require('http');
 var server = net.createServer(function(req, res) {
     debugger;
-    if(req.url === '/greet') {
+    if(req.url === '/greet/name') {
         res.writeHead(200, {
             'Content-Type': 'text/plain'
         });
