@@ -4,7 +4,7 @@ var http = require('http');
 var url = require('url');
 var moment = require('moment');
 
-var server = net.createServer(function(req, res) {
+var server = http.createServer(function(req, res) {
     debugger;
     if (req.url === '/time') {
         var serverTime = moment().format('MMMM Do YYYY, h:mm:ss a');
@@ -21,7 +21,7 @@ var server = net.createServer(function(req, res) {
         return res.end();
     }
 
-    if (req.url === '/greet' &&& req.method === 'POST') {
+    if (req.url === '/greet' && req.method === 'POST') {
         req.on('data', function(data) {
             var parsed = JSON.parse(data.toString());
             console.log('parsing ' + data.toString());
