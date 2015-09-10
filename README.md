@@ -7,4 +7,5 @@
 + This server also separates a POST request to /greet that takes the name in JSON format.
 + http_server.js represents the server file.
 + We are using [SuperAgent](https://visionmedia.github.io/superagent/#test-documentation) by Vision Media.
++ We are using [Moment.js](http://momentjs.com/) for time references.
 + test/test.js includes a Mocha / Chai tests.
