@@ -5,6 +5,8 @@ var jshint = require('gulp-jshint');
 var gulpMocha = require('gulpMocha');
 var chai = require('chai');
 
-gulp.task('somthing', function() {
-   return gulp.src('./http_server');
+gulp.task('default', ['http']);
+
+gulp.task('jshint', function() {
+  return gulp.src(['http_server.js', 'test/**/*.js', 'gulpfile.js']);
 });
