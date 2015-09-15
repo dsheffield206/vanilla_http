@@ -5,13 +5,13 @@ var url = require('url');
 var moment = require('moment');
 
 var server = http.createServer(function(req, res) {
-    debugger;
+
     if (req.url === '/time') {
         var serverTime = moment().format('MMMM Do YYYY, h:mm:ss a');
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify('{"msg": "hello! the time is " + serverTime}'));
-        return res.end();
         console.log('the time is ' + serverTime);
+        return res.end();
     }
 
     if (req.url.slice(0, 6) === '/greet') {
